@@ -1,0 +1,42 @@
+<AppRec xmlns="http://www.kith.no/xmlstds/apprec/2012-02-15">
+  <MsgType V="APPREC" DN="Applikasjonskvittering" />
+  <MIGversion>v1.1 2012-02-15</MIGversion>
+  <GenDate>2023-12-12T11:30:35.2639544+01:00</GenDate>
+  <Id>1cec08a5-2331-4c0a-8384-bf94e13bd195</Id>
+  <Sender>
+    <Role V="PRIM" DN="Primærmottaker" />
+    <HCP>
+      <Inst>
+        <Name>Norsk helsenett SF</Name>
+        <Id>112374</Id>
+        <TypeId V="HER" DN="Identifikator fra Helsetjenesteenhetsregisteret (HER-id)" />
+        <Dept>
+          <Name>Helsenorge</Name>
+          <Id>8093239</Id>
+          <TypeId V="HER" DN="Identifikator fra Helsetjenesteenhetsregisteret (HER-id)" />
+        </Dept>
+      </Inst>
+    </HCP>
+  </Sender>
+  <Receiver>
+    <Role V="AVS" DN="Avsender" />
+    <HCP>
+      <Inst>
+        <Name>VismaLinkTest</Name>
+        <Id>8139611</Id>
+        <TypeId V="HER" DN="Identifikator fra Helsetjenesteenhetsregisteret (HER-id)" />
+        <Dept>
+          <Name>Legetjeneste ved sykehjem mv.AMQ1 Sender</Name>
+          <Id>8139613</Id>
+          <TypeId V="HER" DN="Identifikator fra Helsetjenesteenhetsregisteret (HER-id)" />
+        </Dept>
+      </Inst>
+    </HCP>
+  </Receiver>
+  <Status V="1" DN="OK" />
+  <OriginalMsgId>
+    <MsgType V="DIALOG_INNBYGGER_TJENESTEOVERSIKT" DN="Dialog med innbygger-tjenesteoversikt" />
+    <IssueDate>2023-12-12T11:30:17.0520721+01:00</IssueDate>
+    <Id>3ee8ea5d-9d60-47a1-8b34-8196d726c3ce</Id>
+  </OriginalMsgId>
+</AppRec>

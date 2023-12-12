@@ -86,6 +86,26 @@ public class MetadataHelperTests
         Assert.Equal("59", properties[MetadataKeys.ReceiverLvl1Id]);
         Assert.Equal("90998", properties[MetadataKeys.ReceiverLvl2Id]);
     }
+
+    [Fact]
+    public void WhenApprec11gIsValid_ThenAllPropsShouldBeAdded_tjenesteoversikt()
+    {
+        var payload = XDocument.Load("Files/MetadataTests_Apprec11_tjenesteoversikt.xml");
+        var properties = MetadataHelper.ExtractMessageProperties(payload);
+        Assert.NotNull(properties);
+        Assert.NotEmpty(properties);
+
+        Assert.Equal("APPREC", properties[MetadataKeys.MessageInfoMsgType]);
+        Assert.Equal("1cec08a5-2331-4c0a-8384-bf94e13bd195", properties[MetadataKeys.MessageInfoMsgId]);
+        Assert.Equal("3ee8ea5d-9d60-47a1-8b34-8196d726c3ce", properties[MetadataKeys.MessageInfoOriginalMsgId]);
+        Assert.Equal("DIALOG_INNBYGGER_TJENESTEOVERSIKT", properties[MetadataKeys.MessageInfoOriginalMsgType]);
+        Assert.Equal("http://www.kith.no/xmlstds/apprec/2012-02-15", properties[MetadataKeys.MessageInfoSchemaNamespace]);
+
+        Assert.Equal("112374", properties[MetadataKeys.SenderLvl1Id]);
+        Assert.Equal("8093239", properties[MetadataKeys.SenderLvl2Id]);
+        Assert.Equal("8139611", properties[MetadataKeys.ReceiverLvl1Id]);
+        Assert.Equal("8139613", properties[MetadataKeys.ReceiverLvl2Id]);
+    }
 }
 
 
